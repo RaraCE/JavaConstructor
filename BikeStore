@@ -1,0 +1,36 @@
+//This took me a painstakingly amount of time to write since the class I was taking wasn't very helpful but now I think I understand how
+//constructors work
+package pack;
+
+public class BikeStore {
+	//main method
+	String Brandname;
+	String Modelname;
+	double Listprice;
+	int Tiresize;
+	boolean sold;
+	double Saleprice;
+    public static void main(String[] args) {
+        BikeStore bike1 = new BikeStore("Giant","OCR-1",899.99,28, false, 799.99);
+        BikeStore bike2 = new BikeStore("Specialized","Dolce",1399.99,30, false, 1200.99);
+        BikeStore bike3 = new BikeStore("Schwinn","Cruiser",299.99,24, false, 199.99);
+        
+        System.out.println(bike1.Brandname);
+        System.out.println(bike2.Tiresize);
+        System.out.println(bike3.Saleprice);
+    }
+
+    //constructor
+    public BikeStore (String Brandname, String Modelname, double Listprice, int Tiresize, boolean sold, double Saleprice) {
+    	this.Brandname = Brandname;
+    	this.Modelname = Modelname;
+    	this.Listprice = Listprice;
+    	this.Tiresize = Tiresize;
+    	this.sold = sold;
+    	this.Saleprice = Saleprice;	
+    }
+    //behavior
+    public boolean isSold() {
+    	return (sold != true);
+    }
+}
